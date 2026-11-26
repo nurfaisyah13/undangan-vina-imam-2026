@@ -1,0 +1,1565 @@
+/* =================================================
+   THE WEDDING OF VINA & IMAM
+   ELEGANT CHAMPAGNE - MAROON - GOLD
+================================================= */
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --maroon-primary: #782c33;
+    --maroon-dark: #45191e;
+    --maroon-soft: #a45e61;
+
+    --cream-bg: #f5eee3;
+    --cream-light: #fbf6ed;
+    --cream-dark: #e9ddca;
+
+    --gold-accent: #c5a059;
+    --gold-light: #dfc99b;
+
+    --text-dark: #594344;
+}
+
+/* BODY */
+
+body {
+    background: #21191a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Cormorant Garamond', serif;
+}
+
+/* =================================================
+   MOBILE CONTAINER
+================================================= */
+
+.mobile-container {
+    width: 100%;
+    max-width: 410px;
+    height: 100vh;
+    max-height: 850px;
+
+    background: var(--cream-bg) !important;
+
+    border: 8px solid #302526;
+    border-radius: 22px;
+
+    position: relative;
+    overflow-y: hidden;
+    overflow-x: hidden;
+
+    scroll-behavior: smooth;
+
+    box-shadow: 0 20px 50px rgba(0,0,0,.5);
+}
+
+.mobile-container::-webkit-scrollbar {
+    display: none;
+}
+
+/* =================================================
+   BACKGROUND SLIDE
+================================================= */
+
+.slide {
+    position: relative;
+
+    min-height: 100vh;
+    padding: 65px 25px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 10% 10%,
+            rgba(197,160,89,.12),
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at 90% 90%,
+            rgba(120,44,51,.06),
+            transparent 35%
+        ),
+        linear-gradient(
+            135deg,
+            #fbf6ed,
+            #f3eadc,
+            #f9f1e6
+        );
+
+    border-bottom: 1px solid rgba(197,160,89,.35);
+}
+
+/* Ornamen garis dekoratif */
+
+.slide::before {
+    content: "";
+    position: absolute;
+
+    inset: 13px;
+
+    border: 1px solid rgba(197,160,89,.28);
+
+    border-radius: 3px;
+
+    pointer-events: none;
+    z-index: 1;
+}
+
+.slide::after {
+    content: "✧";
+    position: absolute;
+
+    top: 25px;
+    right: 30px;
+
+    font-size: 20px;
+    color: var(--gold-accent);
+
+    opacity: .65;
+}
+
+/* =================================================
+   BUNGA SUDUT
+   GAMBAR ASLI TETAP DIPERTAHANKAN
+================================================= */
+
+.corner-flower {
+    position: absolute;
+
+    width: 300px;
+    height: auto;
+
+    pointer-events: none;
+
+    z-index: 10;
+
+    opacity: 1;
+
+    mix-blend-mode: normal;
+
+    filter: drop-shadow(0 5px 8px rgba(100,50,40,.12));
+
+    animation: flowerSway 7s ease-in-out infinite alternate;
+}
+
+.top-left {
+    top: 35px;
+    left: -65px;
+
+    transform: rotate(-90deg);
+}
+
+.bottom-right {
+    bottom: 35px;
+    right: -65px;
+
+    transform: rotate(90deg) scale(-1);
+
+    animation-delay: 2s;
+}
+
+@keyframes flowerSway {
+
+    0% {
+        margin-top: 0;
+    }
+
+    50% {
+        margin-top: 7px;
+    }
+
+    100% {
+        margin-top: -5px;
+    }
+}
+
+/* =================================================
+   FALLING PETALS
+================================================= */
+
+.falling-petal {
+    position: absolute;
+
+    top: -30px;
+
+    width: 13px;
+    height: 18px;
+
+    background: linear-gradient(
+        135deg,
+        #e9b9b6,
+        #c8797d
+    );
+
+    border-radius: 100% 0 100% 0;
+
+    opacity: .7;
+
+    pointer-events: none;
+
+    z-index: 15;
+
+    animation: petalFall linear infinite;
+}
+
+@keyframes petalFall {
+
+    0% {
+        transform: translateY(-30px) rotate(0deg);
+        opacity: 0;
+    }
+
+    10% {
+        opacity: .8;
+    }
+
+    50% {
+        transform: translate(35px, 50vh) rotate(180deg);
+    }
+
+    100% {
+        transform: translate(-30px, 105vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* =================================================
+   TYPOGRAPHY
+================================================= */
+
+h1, h2, h3 {
+    font-family: 'Cormorant Garamond', serif;
+}
+
+.small-subtitle {
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: .7rem;
+    letter-spacing: 5px;
+
+    color: var(--gold-accent);
+
+    font-weight: 600;
+
+    margin-bottom: 10px;
+}
+
+.couple-names {
+    font-family: 'Great Vibes', cursive;
+
+    font-size: 3.5rem;
+
+    color: var(--maroon-dark);
+
+    font-weight: 400;
+
+    line-height: 1.2;
+}
+
+.cover-date {
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 1rem;
+
+    letter-spacing: 4px;
+
+    color: var(--maroon-primary);
+}
+
+.divider-cross {
+    width: 65px;
+    height: 1px;
+
+    background: var(--gold-accent);
+
+    margin: 18px auto;
+
+    position: relative;
+}
+
+.divider-cross::after {
+    content: "✧";
+
+    position: absolute;
+
+    left: 50%;
+    top: -11px;
+
+    transform: translateX(-50%);
+
+    background: var(--cream-bg);
+
+    padding: 0 8px;
+
+    color: var(--gold-accent);
+}
+
+/* =================================================
+   SLIDE 1 - COVER
+================================================= */
+
+#slide1 {
+    background:
+        radial-gradient(
+            circle at center,
+            #fff9ee,
+            #f0e3d0
+        );
+}
+
+#slide1 .cover-header {
+    position: relative;
+    z-index: 12;
+}
+
+#slide1 .couple-names {
+    font-size: 3.8rem;
+}
+
+.envelope-image-wrapper {
+    width: 280px;
+
+    margin: 30px 0 18px;
+
+    cursor: pointer;
+
+    z-index: 12;
+
+    transition: .4s ease;
+
+    animation: envelopeFloat 4s ease-in-out infinite;
+}
+
+.envelope-image-wrapper:hover {
+    transform: scale(1.05);
+}
+
+.real-envelope-img {
+    width: 100%;
+    height: auto;
+
+    filter: drop-shadow(0 15px 20px rgba(70,30,30,.25));
+
+    border-radius: 5px;
+}
+
+@keyframes envelopeFloat {
+
+    0%,100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.open-instruction {
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: .65rem;
+
+    letter-spacing: 2px;
+
+    color: var(--maroon-dark);
+
+    z-index: 12;
+}
+
+/* =================================================
+   SLIDE 2 - PEMBUKAAN
+================================================= */
+
+#slide2 {
+    padding: 55px 20px;
+}
+
+.invitation-frame-card {
+
+    width: 100%;
+    max-width: 340px;
+
+    padding: 45px 22px 32px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #fffaf1,
+            #f0e5d4
+        );
+
+    border: 1px solid var(--gold-accent);
+
+    border-radius: 18px 18px 5px 5px;
+
+    box-shadow:
+        0 15px 35px rgba(75,35,35,.12),
+        inset 0 0 20px rgba(197,160,89,.1);
+
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    z-index: 12;
+}
+
+/* Bingkai bagian dalam */
+
+.invitation-frame-card::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 8px;
+
+    border: 1px solid rgba(197,160,89,.55);
+
+    border-radius: 13px 13px 3px 3px;
+
+    pointer-events: none;
+}
+
+/* Ornamen atas */
+
+.invitation-frame-card::after {
+    content: "❧";
+
+    position: absolute;
+
+    top: 12px;
+
+    font-size: 24px;
+
+    color: var(--gold-accent);
+}
+
+/* Wax Seal */
+
+.wax-seal-badge {
+
+    position: absolute;
+
+    top: -20px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 42px;
+    height: 42px;
+
+    background: radial-gradient(
+        circle at 35% 35%,
+        #963b43,
+        #451318
+    );
+
+    border: 2px solid var(--gold-accent);
+
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: #e6c98b;
+
+    font-size: 1rem;
+
+    box-shadow: 0 5px 12px rgba(69,19,24,.3);
+
+    z-index: 15;
+}
+
+#slide2 .arabic-text {
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 1.35rem;
+
+    font-weight: 700;
+
+    color: var(--maroon-dark);
+
+    margin-bottom: 12px;
+}
+
+#slide2 .body-text {
+
+    max-width: 280px;
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: .68rem;
+
+    line-height: 1.8;
+
+    color: var(--text-dark);
+
+    margin-bottom: 15px;
+}
+
+.couple-item {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin: 8px 0;
+
+    width: 100%;
+}
+
+.couple-photo {
+
+    width: 115px;
+    height: 115px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    border: 3px solid var(--gold-accent);
+
+    padding: 3px;
+
+    background: white;
+
+    box-shadow: 0 5px 15px rgba(120,44,51,.18);
+
+    margin-bottom: 10px;
+}
+
+.name-title {
+
+    font-family: 'Great Vibes', cursive;
+
+    font-size: 2.8rem;
+
+    color: var(--maroon-dark);
+
+    line-height: 1.1;
+}
+
+.parent-text {
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: .95rem;
+
+    color: #665454;
+
+    line-height: 1.4;
+}
+
+.ornament-divider {
+
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    width: 65%;
+
+    margin: 12px 0;
+
+    color: var(--gold-accent);
+}
+
+.ornament-divider span {
+
+    flex: 1;
+
+    height: 1px;
+
+    background: linear-gradient(
+        to right,
+        transparent,
+        var(--gold-accent),
+        transparent
+    );
+}
+
+.ornament-divider i {
+    font-size: .7rem;
+}
+
+.day-date-box {
+
+    width: 85%;
+
+    margin-top: 12px;
+
+    padding-top: 12px;
+
+    border-top: 1px solid rgba(197,160,89,.5);
+}
+
+.day-label {
+
+    display: block;
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: .65rem;
+
+    letter-spacing: 4px;
+
+    color: var(--maroon-primary);
+}
+
+.date-big {
+
+    display: block;
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 1.25rem;
+
+    font-weight: 700;
+
+    color: var(--maroon-dark);
+
+    letter-spacing: 2px;
+
+    margin-top: 5px;
+}
+
+.closing-invite-text {
+
+    max-width: 270px;
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: .9rem;
+
+    color: var(--text-dark);
+
+    line-height: 1.6;
+
+    margin-top: 15px;
+}
+
+.thank-you-script {
+
+    font-family: 'Great Vibes', cursive;
+
+    font-size: 1.8rem;
+
+    color: var(--maroon-primary);
+
+    margin-top: 8px;
+}
+
+/* =================================================
+   HEADING UMUM
+================================================= */
+
+.section-heading {
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 2.3rem;
+
+    color: var(--maroon-dark);
+
+    font-weight: 700;
+
+    margin-bottom: 8px;
+
+    position: relative;
+
+    z-index: 12;
+}
+
+.section-subheading {
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: .7rem;
+
+    letter-spacing: 1px;
+
+    color: #806c65;
+
+    margin-bottom: 25px;
+
+    position: relative;
+
+    z-index: 12;
+}
+
+/* =================================================
+   SLIDE 3 - COUNTDOWN
+================================================= */
+
+#slide3 {
+    padding: 60px 25px;
+}
+
+.countdown-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(4,1fr);
+
+    gap: 8px;
+
+    width: 100%;
+
+    margin: 20px 0;
+
+    z-index: 12;
+}
+
+.c-box {
+
+    background: linear-gradient(
+        145deg,
+        #fffaf2,
+        #eadbc5
+    );
+
+    border: 1px solid rgba(197,160,89,.7);
+
+    border-radius: 12px;
+
+    padding: 17px 4px;
+
+    box-shadow: 0 5px 15px rgba(70,30,30,.08);
+
+    position: relative;
+}
+
+.c-box span:first-child {
+
+    display: block;
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 1.8rem;
+
+    font-weight: 700;
+
+    color: var(--maroon-dark);
+}
+
+.c-label {
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: .55rem;
+
+    color: #826f63;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+}
+
+.target-date-text {
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 1.35rem;
+
+    font-weight: 700;
+
+    color: var(--maroon-primary);
+
+    margin: 15px 0 25px;
+
+    z-index: 12;
+}
+
+.btn-play-music-inline {
+
+    background: linear-gradient(
+        135deg,
+        #87353d,
+        #4a181d
+    );
+
+    color: white;
+
+    border: 1px solid var(--gold-accent);
+
+    padding: 11px 25px;
+
+    border-radius: 30px;
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: .75rem;
+
+    cursor: pointer;
+
+    z-index: 12;
+
+    box-shadow: 0 5px 15px rgba(70,20,25,.2);
+}
+
+/* =================================================
+   SLIDE 4 - GALERI EDITORIAL
+================================================= */
+
+#slide4 {
+    padding: 60px 20px;
+}
+
+.gallery-scroll-container {
+
+    width: 100%;
+
+    max-height: 510px;
+
+    overflow-y: auto;
+
+    padding: 15px 8px;
+
+    z-index: 12;
+}
+
+.gallery-scroll-container::-webkit-scrollbar {
+    width: 3px;
+}
+
+.gallery-scroll-container::-webkit-scrollbar-thumb {
+    background: var(--gold-accent);
+    border-radius: 10px;
+}
+
+.gallery-grid-10 {
+
+    display: grid;
+
+    grid-template-columns: repeat(2,1fr);
+
+    gap: 22px 14px;
+
+    width: 100%;
+}
+
+/* Bingkai foto */
+
+.gallery-grid-10 img {
+
+    width: 100%;
+
+    height: 185px;
+
+    object-fit: cover;
+
+    padding: 6px 6px 20px;
+
+    background: #fffaf2;
+
+    border: 1px solid rgba(197,160,89,.6);
+
+    border-radius: 4px;
+
+    box-shadow: 0 7px 15px rgba(60,30,30,.15);
+
+    transition: .4s ease;
+}
+
+/* Kemiringan foto */
+
+.gallery-grid-10 img:nth-child(odd) {
+    transform: rotate(-3deg);
+}
+
+.gallery-grid-10 img:nth-child(even) {
+    transform: rotate(3deg);
+}
+
+.gallery-grid-10 img:hover {
+
+    transform: rotate(0deg) scale(1.04);
+
+    box-shadow: 0 12px 25px rgba(60,30,30,.2);
+
+    z-index: 5;
+}
+
+/* =================================================
+   SLIDE 5 - KADO DIGITAL
+================================================= */
+
+#slide5 {
+    padding: 60px 25px;
+}
+
+.bank-card-maroon {
+
+    width: 100%;
+
+    max-width: 320px;
+
+    padding: 30px 22px;
+
+    margin-top: 25px;
+
+    background:
+        radial-gradient(
+            circle at top right,
+            rgba(255,255,255,.12),
+            transparent 40%
+        ),
+        linear-gradient(
+            135deg,
+            #853941,
+            #45171d
+        );
+
+    border: 1px solid var(--gold-accent);
+
+    border-radius: 17px;
+
+    box-shadow: 0 15px 30px rgba(70,20,25,.25);
+
+    color: white;
+
+    position: relative;
+
+    z-index: 12;
+}
+
+.bank-card-maroon::before {
+
+    content: "✧";
+
+    position: absolute;
+
+    top: 10px;
+    right: 15px;
+
+    color: var(--gold-light);
+
+    font-size: 25px;
+}
+
+.bank-logo {
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 2rem;
+
+    font-weight: 700;
+
+    text-align: left;
+
+    color: white;
+
+    margin-bottom: 35px;
+}
+
+.bank-rek {
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 1.1rem;
+
+    font-weight: 600;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 12px;
+}
+
+.bank-owner {
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 1.1rem;
+
+    color: #f1dfbd;
+
+    margin-bottom: 25px;
+}
+
+.btn-copy-rek {
+
+    background: var(--gold-accent);
+
+    color: var(--maroon-dark);
+
+    border: none;
+
+    padding: 11px 17px;
+
+    border-radius: 6px;
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: .7rem;
+
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+/* =================================================
+   SLIDE 6 - LOKASI
+================================================= */
+
+#slide6 {
+    padding: 60px 25px;
+}
+
+.map-placeholder {
+
+    width: 100%;
+
+    max-width: 330px;
+
+    height: 250px;
+
+    overflow: hidden;
+
+    border: 2px solid var(--gold-accent);
+
+    border-radius: 14px;
+
+    box-shadow: 0 8px 20px rgba(70,30,30,.15);
+
+    background: #e9e1d4;
+
+    position: relative;
+
+    z-index: 12;
+}
+
+.map-placeholder iframe {
+
+    width: 100%;
+
+    height: 100%;
+
+    border: 0;
+}
+
+.btn-maroon {
+
+    display: block;
+
+    width: 100%;
+
+    max-width: 330px;
+
+    padding: 13px;
+
+    margin-top: 18px;
+
+    background: linear-gradient(
+        135deg,
+        #87353d,
+        #45191e
+    );
+
+    color: white;
+
+    text-decoration: none;
+
+    border: 1px solid var(--gold-accent);
+
+    border-radius: 7px;
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: .75rem;
+
+    z-index: 12;
+}
+
+/* =================================================
+   SLIDE 7 - PENUTUP
+================================================= */
+
+#slide7 {
+
+    padding: 70px 28px;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #fff8ed,
+            #eee0ce
+        );
+}
+
+#slide7 .section-heading {
+
+    font-size: 2.6rem;
+
+    margin-bottom: 20px;
+}
+
+#slide7 .body-text {
+
+    max-width: 315px;
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 1.05rem;
+
+    line-height: 1.9;
+
+    color: #60494a;
+
+    margin-top: 10px;
+
+    z-index: 12;
+}
+
+.closing-couple {
+
+    margin-top: 25px;
+
+    z-index: 12;
+}
+
+#slide7 .couple-names {
+
+    font-size: 3.5rem !important;
+
+    color: var(--maroon-dark);
+}
+
+.closing-banner {
+
+    width: 100%;
+
+    max-width: 310px;
+
+    margin-top: 35px;
+
+    padding: 20px 15px;
+
+    border-top: 1px solid var(--gold-accent);
+
+    border-bottom: 1px solid var(--gold-accent);
+
+    position: relative;
+
+    z-index: 12;
+}
+
+.closing-banner::before {
+
+    content: "❧";
+
+    position: absolute;
+
+    top: -18px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    background: #f5eee3;
+
+    padding: 0 10px;
+
+    color: var(--gold-accent);
+
+    font-size: 23px;
+}
+
+.closing-banner p {
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 1rem !important;
+
+    line-height: 1.8;
+
+    font-style: italic;
+
+    color: var(--maroon-dark) !important;
+}
+
+/* =================================================
+   TOMBOL MUSIK
+================================================= */
+
+.music-btn {
+
+    position: fixed;
+
+    bottom: 20px;
+    right: 20px;
+
+    width: 43px;
+    height: 43px;
+
+    background: var(--maroon-dark);
+
+    color: white;
+
+    border: 2px solid var(--gold-accent);
+
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 99;
+
+    cursor: pointer;
+
+    box-shadow: 0 4px 15px rgba(0,0,0,.3);
+}
+
+.music-btn.playing i {
+    animation: musicRotate 3s linear infinite;
+}
+
+@keyframes musicRotate {
+
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* =================================================
+   RESPONSIVE
+================================================= */
+
+@media screen and (max-width: 380px) {
+
+    .slide {
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+
+    .corner-flower {
+        width: 250px;
+    }
+
+    .gallery-grid-10 {
+        gap: 15px 10px;
+    }
+
+    .gallery-grid-10 img {
+        height: 155px;
+    }
+
+    .countdown-grid {
+        gap: 5px;
+    }
+
+    .c-box {
+        padding: 12px 3px;
+    }
+
+    .couple-names {
+        font-size: 3rem;
+    }
+}
+
+/* FOTO TERAKHIR MEMANJANG HORIZONTAL */
+
+.gallery-grid-10 img:last-child {
+    grid-column: 1 / -1;
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    transform: rotate(0deg);
+    padding: 6px;
+    border-radius: 5px;
+    border: 1px solid rgba(197,160,89,.7);
+    box-shadow: 0 8px 18px rgba(60,30,30,.15);
+}
+
+/* =========================================
+   ANIMASI MEMBUKA AMPLOP
+========================================= */
+
+/* Amplop saat mulai dibuka */
+
+.envelope-image-wrapper.opening {
+    animation: envelopeOpen 1.4s ease-in-out forwards !important;
+    pointer-events: none;
+}
+
+@keyframes envelopeOpen {
+    0% {
+        transform: perspective(800px)
+                   rotateX(0deg)
+                   scale(1);
+        opacity: 1;
+        filter: brightness(1);
+    }
+
+    35% {
+        transform: perspective(800px)
+                   rotateX(-18deg)
+                   scale(1.08);
+        opacity: 1;
+        filter: brightness(1.15);
+    }
+
+    65% {
+        transform: perspective(800px)
+                   rotateX(45deg)
+                   scale(0.9);
+        opacity: .8;
+        filter: brightness(1.3);
+    }
+
+    100% {
+        transform: perspective(800px)
+                   rotateX(75deg)
+                   scale(.65);
+        opacity: 0;
+        filter: brightness(1.7);
+    }
+}
+
+/* Efek cahaya ketika amplop dibuka */
+
+#slide1.cover-opening::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+        circle at center,
+        rgba(255, 255, 255, .95),
+        rgba(223, 201, 155, .45),
+        transparent 75%
+    );
+    z-index: 20;
+    pointer-events: none;
+    animation: envelopeGlow 1.3s ease forwards;
+}
+
+@keyframes envelopeGlow {
+    0% {
+        opacity: 0;
+        transform: scale(.3);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(1.8);
+    }
+}
+
+/* Animasi masuk slide 2 */
+
+#slide2 .invitation-frame-card {
+    opacity: 0;
+    transform: translateY(45px) scale(.92);
+}
+
+#slide2.show-invitation .invitation-frame-card {
+    animation: invitationAppear 1.2s cubic-bezier(.2,.8,.2,1) forwards;
+}
+
+@keyframes invitationAppear {
+    0% {
+        opacity: 0;
+        transform: translateY(45px) scale(.92);
+    }
+
+    70% {
+        opacity: 1;
+        transform: translateY(-5px) scale(1.02);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+/* =================================
+COVER DENGAN FOTO MEMPELAI
+================================= */
+
+.slide-cover {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    background: #f8eee8;
+}
+
+.slide-cover::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background-image: url("image/foto-sampul.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+}
+
+/* Foto mempelai */
+.slide-cover::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background-image: url("image/foto-sampul.jpg");
+    background-size: cover;
+    background-position: center 40%;
+    background-repeat: no-repeat;
+
+    opacity: 0.42;
+    filter: blur(0.5px);
+
+    z-index: -1;
+}
+
+/* Efek lembut pada background */
+.slide-cover::before {
+content: "";
+position: absolute;
+inset: 0;
+
+background:
+    url("image/foto-sampul.jpg")
+    center 45% / cover no-repeat;
+
+opacity: 0.22;
+filter: blur(2px);
+
+z-index: -1;
+
+}
+
+/* Tulisan utama */
+.slide-cover .cover-header,
+.slide-cover .guest-name,
+.slide-cover .open-instruction,
+.slide-cover .envelope-image-wrapper {
+position: relative;
+z-index: 2;
+}
+
+/* Nama pengantin */
+.slide-cover .couple-names {
+color: #501b25;
+text-shadow: 0 2px 8px rgba(255,255,255,0.5);
+}
+
+/* Tulisan tanggal */
+.slide-cover .cover-date {
+color: #604037;
+}
+
+/* Tulisan tamu */
+.slide-cover .guest-name {
+color: #44252a;
+}
+
+/* Bunga tetap di atas background */
+.slide-cover .corner-flower {
+z-index: 3;
+}
+
+/* Instruksi buka undangan */
+.slide-cover .open-instruction {
+color: #5b3438;
+letter-spacing: 3px;
+}
+.slide-cover {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    background: #f8eee8;
+}
+
+/* FOTO MEMPELAI */
+.slide-cover::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background-image: url("image/foto-sampul.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    opacity: 0.65;
+    filter: none;
+
+    z-index: -1;
+}
+
+/* TULISAN */
+.slide-cover .cover-header,
+.slide-cover .guest-name,
+.slide-cover .envelope-image-wrapper,
+.slide-cover .open-instruction {
+    position: relative;
+    z-index: 2;
+}
+
+/* BUNGA TETAP DI SUDUT */
+.slide-cover .corner-flower {
+    position: absolute;
+    z-index: 3;
+}
+
+.slide-cover .cover-header {
+    position:relative;
+    top: -100px;
+}
+.slide-cover .guest-name {
+    position:relative;
+    top: 30px;
+}
+.slide-cover .cover-date {
+    position:relative;
+    top: -47px;
+}
+.slide-cover .divider-cross {
+    position:relative;
+    top: 15px;
+}
+/* Kunci scroll sebelum amplop dibuka */
+html, body {
+    overflow: hidden;
+    height: 100%;
+}
+
+/* Izinkan scroll setelah amplop dibuka */
+html.invitation-open,
+body.invitation-open {
+    overflow-y: auto;
+    height: auto;
+}
+
+.mobile-container.invitation-open {
+    overflow-y: auto;
+    overflow-x: hidden;
+}
